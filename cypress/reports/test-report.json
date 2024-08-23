@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-23T18:51:08.763Z",
+    "end": "2024-08-23T18:51:41.943Z",
+    "duration": 33180,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cae457c8-855a-4208-b6cc-417f5ff9fbe1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Login.cy.js",
+      "file": "cypress\\e2e\\Login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2ac44fc8-b762-4ccd-98eb-d470f867edb7",
+          "title": "Given I am on the product page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify user can login",
+              "fullTitle": "Given I am on the product page Verify user can login",
+              "timedOut": null,
+              "duration": 6088,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Login.usernameField).type(Login.username);\ncy.get(Login.passwordField).type(Login.password);\ncy.get(Login.loginBtn).click();",
+              "err": {},
+              "uuid": "5c1d34ac-ca4c-4c64-b0a9-5ecd802b67c6",
+              "parentUUID": "2ac44fc8-b762-4ccd-98eb-d470f867edb7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify user can sort by Name A - Z",
+              "fullTitle": "Given I am on the product page Verify user can sort by Name A - Z",
+              "timedOut": null,
+              "duration": 3235,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Login.usernameField).type(Login.username);\ncy.get(Login.passwordField).type(Login.password);\ncy.get(Login.loginBtn).click();\ncy.contains('Name (A to Z)').should(\"be.visible\");",
+              "err": {},
+              "uuid": "031aaa45-e22a-4bc6-bd64-f611462a0bfd",
+              "parentUUID": "2ac44fc8-b762-4ccd-98eb-d470f867edb7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify user can change the sort sorting by Name (Z - A)",
+              "fullTitle": "Given I am on the product page Verify user can change the sort sorting by Name (Z - A)",
+              "timedOut": null,
+              "duration": 2000,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Login.usernameField).type(Login.username);\ncy.get(Login.passwordField).type(Login.password);\ncy.get(Login.loginBtn).click();\ncy.get(Login.sortBtn).select('Name (Z to A)');\ncy.contains('Name (Z to A)').should(\"be.visible\");",
+              "err": {},
+              "uuid": "c3fac806-ec0d-4e5c-a3ad-0b9fa077fb94",
+              "parentUUID": "2ac44fc8-b762-4ccd-98eb-d470f867edb7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that items are sorted correctly",
+              "fullTitle": "Given I am on the product page Verify that items are sorted correctly",
+              "timedOut": null,
+              "duration": 21473,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(Login.usernameField).type(Login.username);\ncy.get(Login.passwordField).type(Login.password);\ncy.get(Login.loginBtn).click();\ncy.wait(5000);\ncy.get(Login.sortBtn).select('Name (Z to A)');\ncy.wait(5000);\ncy.contains('Name (Z to A)').should(\"be.visible\");\ncy.wait(5000);\ncy.contains('Test.allTheThings() T-Shirt (Red)').should(\"be.visible\");",
+              "err": {},
+              "uuid": "1f242486-684d-4773-b75e-b93abacfd864",
+              "parentUUID": "2ac44fc8-b762-4ccd-98eb-d470f867edb7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5c1d34ac-ca4c-4c64-b0a9-5ecd802b67c6",
+            "031aaa45-e22a-4bc6-bd64-f611462a0bfd",
+            "c3fac806-ec0d-4e5c-a3ad-0b9fa077fb94",
+            "1f242486-684d-4773-b75e-b93abacfd864"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32796,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "test-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "reportFilename": "test-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
